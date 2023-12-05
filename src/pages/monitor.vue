@@ -132,7 +132,6 @@
 		</el-dialog>
 		<el-dialog
 			:title="currentItem && currentItem.title"
-			top="1vh"
 			:visible="dialogVisible4"
 			:close-on-click-modal="false"
 			:close-on-press-escape="false"
