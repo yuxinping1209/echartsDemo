@@ -87,7 +87,7 @@
 				</div>
 			</div>
 		</el-dialog>
-		<el-dialog title="水量负荷预警" top="1vh" :visible="dialogVisible1" :close-on-click-modal="false" :close-on-press-escape="false" @close="closeDialog" width="50%">
+		<el-dialog title="水量负荷预警"   top="10vh":visible="dialogVisible1" :close-on-click-modal="false" :close-on-press-escape="false" @close="closeDialog" width="45%">
 			<div v-if="dialogVisible1">
 				<div v-for="item in list1" :key="item.id">
 					<span class="item-title" style="margin-left: 10px;">{{ item.title }}</span>
@@ -109,7 +109,7 @@
 				</div>
 			</div>
 		</el-dialog>
-		<el-dialog title="水量负荷预测" top="1vh" :visible="dialogVisible2" :close-on-click-modal="false" :close-on-press-escape="false" @close="closeDialog" width="45%">
+		<el-dialog title="水量负荷预测" :visible="dialogVisible2" :close-on-click-modal="false" :close-on-press-escape="false" @close="closeDialog" width="45%">
 			<div v-if="dialogVisible2">
 				<div v-for="item in list2" :key="item.id">
 					<span class="item-title" style="margin-left: 10px;">{{ item.title }}</span>
