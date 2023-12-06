@@ -7,7 +7,7 @@
 						<img src="../assets/operate.png" alt="" v-if="el.tagName === '预测值'" class="title-icon" />
 						<img src="../assets/target.png" alt="" v-else-if="el.tagName === '当前值'" class="title-icon" />
 						<img src="../assets/param.png" alt="" v-else="el.tagName === '控制值'" class="title-icon" />
-						<span class="tagname" :style="{ color: el.color || '#333' }">{{ el.tagName && el.tagName + '：' + el.tagValue }}</span>
+						<span class="tagname" :style="{ color: el.color || '#333' }">{{ el.tagName && el.tagName + '：' + el.tagValue+item.unit }}</span>
 					</div>
 				</div>
 
