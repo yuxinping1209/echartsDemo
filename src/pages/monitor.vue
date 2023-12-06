@@ -87,7 +87,7 @@
 				</div>
 			</div>
 		</el-dialog>
-		<el-dialog title="水量负荷预警"   top="10vh":visible="dialogVisible1" :close-on-click-modal="false" :close-on-press-escape="false" @close="closeDialog" width="45%">
+		<el-dialog title="水量负荷预警" top="10vh" :visible="dialogVisible1" :close-on-click-modal="false" :close-on-press-escape="false" @close="closeDialog" width="45%">
 			<div v-if="dialogVisible1">
 				<div v-for="item in list1" :key="item.id">
 					<span class="item-title" style="margin-left: 10px;">{{ item.title }}</span>
@@ -117,9 +117,9 @@
 				</div>
 			</div>
 		</el-dialog>
-		<el-dialog title="水质波动预警" top="1vh" :visible="dialogVisible3" :close-on-click-modal="false" :close-on-press-escape="false" @close="closeDialog" width="60%">
+		<el-dialog title="水质波动预警" top="5vh" :visible="dialogVisible3" :close-on-click-modal="false" :close-on-press-escape="false" @close="closeDialog" width="80%">
 			<div v-if="dialogVisible3" class="flex jlr wrap">
-				<div v-for="item in list3" :key="item.id" style="width: 49%;">
+				<div v-for="item in list3" :key="item.id" style="width: 33%;">
 					<span class="item-title" style="margin-left: 10px;">{{ item.title }}</span>
 					<echartsDialogItem v-if="dialogVisible3" :item="item" :height="'260px'">
 						<el-radio-group v-model="item.radio" size="mini" @change="v => changeType(v, item)" style="margin-right: 14px;">
@@ -127,6 +127,36 @@
 							<el-radio-button label="周"></el-radio-button>
 						</el-radio-group>
 					</echartsDialogItem>
+				</div>
+				<div class="flex jlr" style="width: 100%;">
+					<div style="margin-top: 20px;width: 49%;">
+						<div class="alarm-info flex a-center">
+							<img src="../assets/alarm.png" alt="" />
+							<span>风险提示1</span>
+						</div>
+						<div class="alarm-info flex a-center">
+							<img src="../assets/alarm.png" alt="" />
+							<span>风险提示2</span>
+						</div>
+						<div class="alarm-info flex a-center">
+							<img src="../assets/alarm.png" alt="" />
+							<span>风险提示3</span>
+						</div>
+					</div>
+					<div style="margin-top: 20px;;width: 49%;">
+						<div class="alarm-info flex a-center">
+							<img src="../assets/alarm.png" alt="" />
+							<span>风险提示4</span>
+						</div>
+						<div class="alarm-info flex a-center">
+							<img src="../assets/alarm.png" alt="" />
+							<span>风险提示5</span>
+						</div>
+						<div class="alarm-info flex a-center">
+							<img src="../assets/alarm.png" alt="" />
+							<span>风险提示6</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</el-dialog>
