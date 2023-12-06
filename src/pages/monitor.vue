@@ -502,7 +502,7 @@ export default {
 					xDataList: ['2023-11-01', '2023-11-02', '2023-11-03', '2023-11-04', '2023-11-05', '2023-11-06', '2023-11-07'],
 					yDataList: [[2000, 2500, 2800, 1800, 1900, 2600, 3200]],
 					title: '内回流控制预警',
-					nameList: ['内回流控制预警'],
+					nameList: ['内回流'],
 					type: 'line',
 					unit: 'm³/h',
 					markLineList: [
@@ -524,7 +524,7 @@ export default {
 					xDataList: ['2023-11-01', '2023-11-02', '2023-11-03', '2023-11-04', '2023-11-05', '2023-11-06', '2023-11-07'],
 					yDataList: [[2, 2.5, 3, 2.5, 1, 3.6, 2.8]],
 					title: 'DO控制预警',
-					nameList: ['DO控制预警'],
+					nameList: ['DO'],
 					type: 'line',
 					unit: 'mg/L',
 					markLineList: [
@@ -547,7 +547,7 @@ export default {
 					xDataList: ['2023-11-01', '2023-11-02', '2023-11-03', '2023-11-04', '2023-11-05', '2023-11-06', '2023-11-07'],
 					yDataList: [[1000, 2500, 2800, 1800, 900, 2600, 3200]],
 					title: '外回流控制预警',
-					nameList: ['外回流控制预警'],
+					nameList: ['外回流'],
 					type: 'line',
 					unit: 'm³/h',
 					markLineList: [
@@ -568,7 +568,7 @@ export default {
 					xDataList: ['2023-11-01', '2023-11-02', '2023-11-03', '2023-11-04', '2023-11-05', '2023-11-06', '2023-11-07'],
 					yDataList: [[6000, 10000, 8000, 9000, 7000, 6000, 6500]],
 					title: 'MLSS控制预警',
-					nameList: ['MLSS控制预警'],
+					nameList: ['MLSS'],
 					type: 'line',
 					unit: 'mg/L',
 					markLineList: [
@@ -589,7 +589,7 @@ export default {
 					xDataList: ['2023-11-01', '2023-11-02', '2023-11-03', '2023-11-04', '2023-11-05', '2023-11-06', '2023-11-07'],
 					yDataList: [[60, 100, 80, 90, 70, 60, 65]],
 					title: '碳源控制预警',
-					nameList: ['碳源控制预警'],
+					nameList: ['碳源'],
 					type: 'line',
 					unit: 'm³/h',
 					markLineList: [
