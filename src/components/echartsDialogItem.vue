@@ -7,7 +7,7 @@
 						<img src="../assets/operate.png" alt="" v-if="el.tagName === '预测值'" class="title-icon" />
 						<img src="../assets/target.png" alt="" v-else-if="el.tagName === '当前值'" class="title-icon" />
 						<img src="../assets/param.png" alt="" v-else="el.tagName === '控制值'" class="title-icon" />
-						<span class="tagname" :style="{ color: el.color || '#333' }">{{ el.tagName && el.tagName + '：' + el.tagValue+item.unit }}</span>
+						<span class="tagname" :style="{ color: el.color || '#333' }">{{ el.tagName && el.tagName + '：' + el.tagValue + item.unit }}</span>
 					</div>
 				</div>
 
@@ -117,13 +117,6 @@ export default {
 			});
 			this.optionChart = this.$echar.init(this.$refs['echarts' + this.item.id], 'hgCharts');
 			let option = {
-				title: {
-					// text: `${this.item.title}(${this.item.unit})`,
-					// textStyle: {
-					// 	fontSize: 12
-					// }
-					// subtext: `单位（${this.item.unit}）`
-				},
 				color: this.item.nameList.length == 1 ? colorList[this.item.id % 9] : colorArr,
 				tooltip: {
 					trigger: 'item',
@@ -141,12 +134,6 @@ export default {
 					bottom: this.item.zoom ? '10%' : '3%',
 					containLabel: true
 				},
-
-				// toolbox: {
-				// 	feature: {
-				// 		saveAsImage: {}
-				// 	}
-				// },
 				xAxis: {
 					type: 'category',
 					boundaryGap: true,
@@ -176,10 +163,6 @@ export default {
 	font-weight: bold;
 }
 .echart-wrapper {
-	// border: 1px solid #ebeef5;
-	// background-color: #fff;
-	// color: #303133;
-	// box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 	padding: 6px;
 	position: relative;
 	border-radius: 10px;
@@ -205,7 +188,6 @@ export default {
 .tag {
 	display: flex;
 	align-items: center;
-	// justify-content: center;
 }
 .tagname {
 	font-size: 14px;

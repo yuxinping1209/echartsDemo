@@ -11,16 +11,20 @@
 
 			<div :ref="echarts" style="height: 100%;flex:1;"></div>
 		</div>
-
-		<div class="alarm" v-if="item.alarmInfo !== null">
-			<img src="../assets/alarm.png" alt="" />
-			{{ item.title }}超负荷报警信息
-		</div>
+		<riskItem v-if="item.alarmInfo !== null" class="alarm" border="none">
+			<template v-slot:content>
+				{{ item.title }}超负荷报警信息
+			</template>
+		</riskItem>
 	</div>
 </template>
 
 <script>
+import riskItem from './riskItem.vue';
 export default {
+	components: {
+		riskItem
+	},
 	props: {
 		item: {
 			type: Object
@@ -167,7 +171,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .echart-wrapper {
 	border: 1px solid #ebeef5;
 	background-color: #fff;
@@ -184,11 +187,9 @@ export default {
 	right: 0;
 	bottom: 0;
 	height: 30px;
-	background-color: rgba(223, 80, 80, 0.29);
-	display: flex;
-	align-items: center;
 	font-size: 14px;
-	padding: 10px;
+	padding: 10px !important;
+	margin: 0 !important;
 }
 .tag-wrapper {
 	padding: 10px 0;
